@@ -20,7 +20,15 @@ app.get('/user', (req, res) => {
     }]
     res.send(data, 200)
 })
-
+app.get('/error-server', (req, res)=>{
+    res.send(500);
+})
+app.get('/bad-request', (req, res)=>{
+    res.send(400);
+})
+app.get('/created', (req, res)=>{
+    res.send(201)
+})
 app.listen(port, (error) =>{
     console.log('Server Jalan di 127.0.0.1:3000 ya njingg')
 })
